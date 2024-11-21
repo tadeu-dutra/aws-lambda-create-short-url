@@ -113,16 +113,21 @@ mvn clean package
 
 1. Create AWS Lambda
 
+```text
 Function name: url-shortener
 Runtime: Java 17
 Additional Configuration > Enable function URL > Auth type = NONE
 Hit the button `Create function`!
-
+```
+```text
 NOTE: update Handler at Runtime Settings based on the package structure of your own project.
+```
 
 2. Create an S3 Bucket
 
+```text
 Bucket name: url-shortener-bucket (remember that the bucket name must be unique)
+```
 
 3. Add Policy Permission
 
@@ -136,8 +141,9 @@ Resources > Specific > Add ARNs:
 Click `Add ARNs`
 ```
 
+```text
 Access JSON View of the Policy Permissions and add not only the ARN bucket objects but also the ARN Bucket permission by doing the following:
-
+```
 
 ```json
 {
@@ -159,7 +165,8 @@ Access JSON View of the Policy Permissions and add not only the ARN bucket objec
 }
 ```
 
+```text
 Policy name: `access-to-url-shortener-bucket`
-
+```
 
 
