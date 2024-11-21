@@ -126,6 +126,7 @@ Bucket name: url-shortener-bucket (remember that the bucket name must be unique)
 
 3. Add Policy Permission
 
+```text
 Access Lambda > Configuration > Permissions > Role name > Create policy > S3 > PutObject (Write)
 Access Lambda > Configuration > Permissions > Role name > Create policy > S3 > GetObject (Read)
 Resources > Specific > Add ARNs:
@@ -133,8 +134,10 @@ Resources > Specific > Add ARNs:
 	. Resource object name: *
 	. Resource ARN: arn:aws:s3:::url-shortener-bucket/*
 Click `Add ARNs`
+```
 
 Access JSON View of the Policy Permissions and add not only the ARN bucket objects but also the ARN Bucket permission by doing the following:
+
 
 ```json
 {
