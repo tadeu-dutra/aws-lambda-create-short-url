@@ -109,6 +109,9 @@ mvn exec:java -Dexec.mainClass="com.example.App"
 mvn clean package
 ```
 
+From now on please check the files in the repository itself for reference.
+
+
 ### AWS Console
 
 1. Create AWS Lambda
