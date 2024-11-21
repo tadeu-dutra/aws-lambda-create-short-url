@@ -141,9 +141,7 @@ Resources > Specific > Add ARNs:
 Click `Add ARNs`
 ```
 
-```text
-Access JSON View of the Policy Permissions and add not only the ARN bucket objects but also the ARN Bucket permission by doing the following:
-```
+Access JSON View of the Policy Permissions and add not only the ARN bucket objects but also the ARN Bucket permission by doing the following:```
 
 ```json
 {
