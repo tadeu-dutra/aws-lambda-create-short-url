@@ -1,13 +1,9 @@
 package com.serverless.validator;
 
 import java.util.Map;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import lombok.extern.log4j.Log4j2;
-
-@Log4j2
 public class RequestValidator {
 
     public static Map<String, String> parseRequestBody(String body, ObjectMapper objectMapper) {
@@ -20,7 +16,7 @@ public class RequestValidator {
 
             String errorMessage = "Error parsing JSON body: " + ex.getMessage();
             log.error(errorMessage, ex);
-            throw  new RuntimeException(errorMessage, ex);
+            throw new RuntimeException(errorMessage, ex);
         }
     }
 

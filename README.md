@@ -1,3 +1,45 @@
+## Description
+
+This application was developed during a free Java course at Rocketseat using Java and AWS.
+
+## Keywords
+
+Serverless, AWS Lambda, AWS S3, API Gateway.
+
+### Running the Application
+
+After cloning the repository, navigate to the project folder and run the following command:
+
+```bash
+mvn clean package
+```
+
+A file named as `aws-lambda-create-short-url-1.0-SNAPSHOT.jar` should be generated in the `target` folder.
+
+## Configure an AWS Lambda project on AWS
+
+### Step 1: Sign in to AWS Management Console
+
+Go to AWS Management Console and sign in with your AWS credentials.
+
+### Step 2: Create a New Lambda Function
+
+In the AWS Management Console, search for Lambda and click on the `Create function` button.
+
+### Step 3: Configure the Function
+
+For this project go with the option `Author from scratch`. In the Basic information choose the Runtime `Java 17`, in the Additional Configurations check the option `Enable function URL` and select `NONE`.
+
+You can keep the rest as it is and click `Create function`.
+
+Upload your jar file by clicking on `Upload from`.
+
+In the Runtime settings section, edit the `Handler` method to be invoked. This value has a default of `example.Hello::handleRequest`, you may change it to `serverless.App::handleRequest`.
+
+
+
+
+
 # URL Shortener with AWS Lambda
 
 This project is a URL shortener application developed during a Java course, leveraging AWS Lambda to create a serverless architecture. The application allows users to create short URLs and redirect them to the original URLs.

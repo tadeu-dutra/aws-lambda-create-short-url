@@ -3,16 +3,12 @@ package com.serverless.service.impl;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.serverless.model.UrlData;
 import com.serverless.service.S3StorageService;
 import com.serverless.service.UrlShortenerService;
 import com.serverless.validator.RequestValidator;
 
-import lombok.extern.log4j.Log4j2;
-
-@Log4j2
 public class UrlShortenerServiceImpl implements UrlShortenerService {
 
     private static final int SUBSTRING_START_INDEX = 0;
@@ -49,5 +45,4 @@ public class UrlShortenerServiceImpl implements UrlShortenerService {
     private static String generateUrlCode() {
         return UUID.randomUUID().toString().substring(SUBSTRING_START_INDEX, SUBSTRING_LENGTH);
     }
-
 }
