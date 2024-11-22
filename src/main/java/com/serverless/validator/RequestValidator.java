@@ -1,6 +1,7 @@
 package com.serverless.validator;
 
 import java.util.Map;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -15,7 +16,6 @@ public class RequestValidator {
         } catch (JsonProcessingException ex) {
 
             String errorMessage = "Error parsing JSON body: " + ex.getMessage();
-            log.error(errorMessage, ex);
             throw new RuntimeException(errorMessage, ex);
         }
     }
@@ -29,7 +29,6 @@ public class RequestValidator {
         } catch (NumberFormatException e) {
 
             String errorMessage = "Invalid expiration time format";
-            log.error(errorMessage, e);
             throw  new RuntimeException(errorMessage, e);
         }
     }
