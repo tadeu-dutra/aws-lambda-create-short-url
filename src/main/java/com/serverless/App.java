@@ -13,11 +13,12 @@ public class App implements RequestHandler<Map<String, Object>, Map<String, Stri
 
     private final UrlShortenerService urlShortenerService;
 
-    public App() {
-        this(new UrlShortenerServiceImpl(new S3StorageServiceImpl(), new ObjectMapper()));
-    }
     public App(UrlShortenerService urlShortenerService) {
         this.urlShortenerService = urlShortenerService;
+    }
+    
+    public App() {
+        this(new UrlShortenerServiceImpl(new S3StorageServiceImpl(), new ObjectMapper()));
     }
 
     @Override
